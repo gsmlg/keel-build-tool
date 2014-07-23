@@ -7,17 +7,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {{json depsMap}};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
-  var func = {{{moduleCode}}};
-  var out = func.call(null, loader, e, m);
+  var func = {{{transRequire moduleCode depsMap}}};
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;

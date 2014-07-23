@@ -3,26 +3,29 @@ fs = require 'fs'
 vm = require 'vm'
 handlebars = require 'handlebars'
 {join, dirname, relative, extname} = require 'path'
-commentRegExp = /(\/\*([\s\S]*?)\*\/|([^:]|^)\/\/(.*)$)/mg
-cjsRequireRegExp = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g
 
 handlebars.registerHelper 'json', (o)-> new handlebars.SafeString JSON.stringify o
 
 handlebars.registerHelper 'makeName', (s)->
-   str = s.replace '\'', '\\\''
+  str = s.replace '\'', '\\\''
     .replace '\\', '\\\\'
-    new handlebars.SafeString str
+  new handlebars.SafeString str
 
 handlebars.registerHelper 'transRequire', (code, map)->
-  transed = code.replace cjsRequireRegExp, (matched, name)->
+  requireRegExp = /require\s*\(\s*['"]([^'"\s]+)['"]\s*\)/g
+  transed = code.replace requireRegExp, (matched, name)->
     moduleName = map[name]
     if moduleName?
-      '__modules__[\'#{name}\']()'
+      strName = moduleName.replace '\'', '\\\''
+        .replace '\\', '\\\\'
+      '__modules__[\''+strName+'\']()'
     else
       matched
   transed
 
 class Package
+  commentRegExp = /(\/\*([\s\S]*?)\*\/|([^:]|^)\/\/(.*)$)/mg
+  cjsRequireRegExp = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g
 
   constructor: (options)->
     @_options = _.extend {}, options
