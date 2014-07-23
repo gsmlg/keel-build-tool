@@ -54,7 +54,7 @@ class Package
     script.deps.forEach (f)=>
       return if f in @ignore
       return if f in _.pluck(@files, 'path')
-      @resolve f
+      @resolve join(@basePath, f)
 
   parse: (data, file)->
     script = {
