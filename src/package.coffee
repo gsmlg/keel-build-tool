@@ -37,7 +37,7 @@ class Package
   build: ->
     @check_and_load()
     @generateModules()
-    tpl = fs.readFileSync join(__dirname, 'template.hbs'), 'utf-8'
+    tpl = fs.readFileSync join(__dirname, '..', 'template.hbs'), 'utf-8'
     template = handlebars.compile tpl
     @output = template({modules: @modules, name: @modules[0].name})
 

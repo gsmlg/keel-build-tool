@@ -7,37 +7,28 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./keel/router":"keel\\router.js","./keel/sync":"keel\\sync.js","./keel/template":"keel\\template.js","./keel/helpers":"keel\\helpers.js","./keel/events":"keel\\events.js","./keel/model":"keel\\model.js","./keel/collection":"keel\\collection.js","./keel/view":"keel\\view.js","./keel/layout":"keel\\layout.js","./keel/itemview":"keel\\itemview.js","./keel/collectionview":"keel\\collectionview.js","./keel/compositeview":"keel\\compositeview.js","./keel/tree":"keel\\tree.js","./keel/i18n":"keel\\i18n.js","./keel/validate":"keel\\validate.js","./keel/application":"keel\\application.js","./keel/core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    require('./keel/router');
-    require('./keel/sync');
-    require('./keel/template');
-    require('./keel/helpers');
-    require('./keel/events');
-    require('./keel/model');
-    require('./keel/collection');
-    require('./keel/view');
-    require('./keel/layout');
-    require('./keel/itemview');
-    require('./keel/collectionview');
-    require('./keel/compositeview');
-    require('./keel/tree');
-    require('./keel/i18n');
-    require('./keel/validate');
-    require('./keel/application');
+    __modules__['keel\\router.js']();
+    __modules__['keel\\sync.js']();
+    __modules__['keel\\template.js']();
+    __modules__['keel\\helpers.js']();
+    __modules__['keel\\events.js']();
+    __modules__['keel\\model.js']();
+    __modules__['keel\\collection.js']();
+    __modules__['keel\\view.js']();
+    __modules__['keel\\layout.js']();
+    __modules__['keel\\itemview.js']();
+    __modules__['keel\\collectionview.js']();
+    __modules__['keel\\compositeview.js']();
+    __modules__['keel\\tree.js']();
+    __modules__['keel\\i18n.js']();
+    __modules__['keel\\validate.js']();
+    __modules__['keel\\application.js']();
 
-    module.exports = require('./keel/core');
+    module.exports = __modules__['keel\\core.js']();
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -54,17 +45,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone;
 
@@ -76,7 +58,7 @@ var __modules__ = {};
     });
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -93,15 +75,6 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
     var $ = require('jquery'),
         _ = require('underscore'),
@@ -163,7 +136,7 @@ var __modules__ = {};
     module.exports = Keel;
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -180,19 +153,10 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./helpers":"keel\\helpers.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
-        throwError = require('./helpers')
+        throwError = __modules__['keel\\helpers.js']()
         .throwError;
 
     // Keel.sync
@@ -402,7 +366,7 @@ var __modules__ = {};
     }
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -419,17 +383,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core');
+    var Keel = __modules__['keel\\core.js']();
 
     var helpers = module.exports = Keel.hepers = {};
 
@@ -496,7 +451,7 @@ var __modules__ = {};
     };
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -513,19 +468,10 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./helpers":"keel\\helpers.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
-        setKey = require('./helpers').setObject;
+        setKey = __modules__['keel\\helpers.js']().setObject;
 
     var _escape = function(str) {
         if (!str) {
@@ -694,7 +640,7 @@ var __modules__ = {};
     });
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -711,17 +657,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._;
 
     // shot cut
@@ -990,7 +927,7 @@ var __modules__ = {};
     module.exports = Events;
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1007,21 +944,12 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./sync":"keel\\sync.js","./events":"keel\\events.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone,
-        sync = require('./sync'),
-        Events = require('./events');
+        sync = __modules__['keel\\sync.js'](),
+        Events = __modules__['keel\\events.js']();
 
     module.exports = Keel.Model = Backbone.Model.extend({
         sync: function() {
@@ -1080,7 +1008,7 @@ var __modules__ = {};
 
     _.extend(Keel.Model.prototype, Events);
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1097,22 +1025,13 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./model":"keel\\model.js","./sync":"keel\\sync.js","./events":"keel\\events.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone,
-        Model = require('./model'),
-        sync = require('./sync'),
-        Events = require('./events');
+        Model = __modules__['keel\\model.js'](),
+        sync = __modules__['keel\\sync.js'](),
+        Events = __modules__['keel\\events.js']();
 
     module.exports = Keel.Collection = Backbone.Collection.extend({
         model: Model,
@@ -1279,7 +1198,7 @@ var __modules__ = {};
 
     _.extend(Keel.Collection.prototype, Events);
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1296,21 +1215,12 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./template":"keel\\template.js","./events":"keel\\events.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
-        Keel = require('./core'),
-        template = require('./template'),
-        Events = require('./events');
+        Keel = __modules__['keel\\core.js'](),
+        template = __modules__['keel\\template.js'](),
+        Events = __modules__['keel\\events.js']();
 
     module.exports = Keel.View = Backbone.View.extend({
         constructor: function() {
@@ -1431,7 +1341,7 @@ var __modules__ = {};
     _.extend(Keel.View.prototype, Events);
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1448,19 +1358,10 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./view":"keel\\view.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
-        View = require('./view');
+        View = __modules__['keel\\view.js']();
 
     module.exports = Keel.Layout = View.extend({
         constructor: function(options) {
@@ -1549,7 +1450,7 @@ var __modules__ = {};
         }
     });
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1566,19 +1467,10 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./view":"keel\\view.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
-        View = require('./view');
+        View = __modules__['keel\\view.js']();
 
     module.exports = Keel.ItemView = View.extend({
         constructor: function(options) {
@@ -1606,7 +1498,7 @@ var __modules__ = {};
 
     });
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1623,21 +1515,12 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./itemview":"keel\\itemview.js","./view":"keel\\view.js","./helpers":"keel\\helpers.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
-        ItemView = require('./itemview'),
-        View = require('./view'),
-        throwError = require('./helpers')
+        ItemView = __modules__['keel\\itemview.js'](),
+        View = __modules__['keel\\view.js'](),
+        throwError = __modules__['keel\\helpers.js']()
         .throwError;
 
     module.exports = Keel.CollectionView = View.extend({
@@ -1829,7 +1712,7 @@ var __modules__ = {};
     });
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1846,19 +1729,10 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./collectionview":"keel\\collectionview.js","./helpers":"keel\\helpers.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
-        CollectionView = require('./collectionview'),
-        throwError = require('./helpers')
+    var Keel = __modules__['keel\\core.js'](),
+        CollectionView = __modules__['keel\\collectionview.js'](),
+        throwError = __modules__['keel\\helpers.js']()
         .throwError;
 
     module.exports = Keel.CompositeView = CollectionView.extend({
@@ -1930,7 +1804,7 @@ var __modules__ = {};
 
     });
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -1947,19 +1821,10 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js","./model":"keel\\model.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
-        Model = require('./model');
+        Model = __modules__['keel\\model.js']();
 
     module.exports = Keel.TreeModel = Model.extend({
         parse: function(data) {
@@ -2057,7 +1922,7 @@ var __modules__ = {};
         }
     });
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -2074,17 +1939,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._;
 
     module.exports = Keel.i18n = {};
@@ -2181,7 +2037,7 @@ var __modules__ = {};
     };
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -2198,17 +2054,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._;
 
     module.exports = Keel.Validate = {};
@@ -2250,7 +2097,7 @@ var __modules__ = {};
     };
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
@@ -2267,17 +2114,8 @@ var __modules__ = {};
   var e = {};
   var m = {};
   m.exports = e;
-  var loader = function (name) {
-  var maps = {"./core":"keel\\core.js"};
-  var moduleName = maps[name];
-  if (moduleName) {
-  return __modules__[moduleName]();
-  } else {
-  return require(name);
-  }
-  };
   var func = function (require, exports, module) {
-    var Keel = require('./core'),
+    var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone,
         Application;
@@ -2367,7 +2205,7 @@ var __modules__ = {};
     module.exports = Keel.Application = Application;
 
 };
-  var out = func.call(null, loader, e, m);
+  var out = func.call(null, require, e, m);
   return out ? out : m.exports;
   }
   var module_obj = null;
