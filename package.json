@@ -1,0 +1,19 @@
+{
+  "name": "keel-build-tool",
+  "version": "0.0.0",
+  "description": "build for keel",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "keel",
+    "build"
+  ],
+  "author": "gsmlg",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "underscore": "^1.6.0"
+  }
+}

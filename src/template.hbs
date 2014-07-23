@@ -1,0 +1,34 @@
+define(function(require, exports, module){
+module.exports = (function(require){
+var __modules__ = {};
+{{#each modules}}
+  __modules__['{{makeName name}}'] = (function(){
+  var module = function(){
+  var e = {};
+  var m = {};
+  m.exports = e;
+  var loader = function (name) {
+  var maps = {{json depsMap}};
+  var moduleName = maps[name];
+  if (moduleName) {
+  return __modules__[moduleName]();
+  } else {
+  return require(name);
+  }
+  };
+  var func = {{{moduleCode}}};
+  var out = func.call(null, loader, e, m);
+  return out ? out : m.exports;
+  }
+  var module_obj = null;
+  return function(){
+  if (module_obj===null) {
+  module_obj = module();
+  }
+  return module_obj;
+  }
+  }())
+{{/each}}
+return __modules__['{{makeName name}}']();
+}(require));
+});
