@@ -39,6 +39,7 @@ class Package
     @generateModules()
     tpl = fs.readFileSync join(__dirname, '..', 'template.hbs'), 'utf-8'
     template = handlebars.compile tpl
+    # console.log _.last(@modules)
     @output = template({modules: @modules, name: @modules[0].name})
 
   check_and_load: ->
@@ -53,7 +54,7 @@ class Package
     @files.push script
     script.deps.forEach (f)=>
       return if f in @ignore
-      return if f in _.pluck(@files, 'path')
+      return if f in _.pluck(@files, 'name')
       @resolve join(@basePath, f)
 
   parse: (data, file)->
