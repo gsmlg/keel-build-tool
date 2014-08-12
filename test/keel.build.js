@@ -1,13 +1,13 @@
-define(function(require, exports, module){
+define('keel', ['backbone','underscore','jquery'], function(require, exports, module){
 module.exports = (function(require){
-var __modules__ = {};
+  var __modules__ = {};
 
   __modules__['keel.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     __modules__['keel\\router.js']();
     __modules__['keel\\sync.js']();
     __modules__['keel\\template.js']();
@@ -28,24 +28,24 @@ var __modules__ = {};
     module.exports = __modules__['keel\\core.js']();
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\router.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone;
@@ -58,24 +58,24 @@ var __modules__ = {};
     });
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\core.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var $ = require('jquery'),
         _ = require('underscore'),
         Backbone = require('backbone');
@@ -136,24 +136,24 @@ var __modules__ = {};
     module.exports = Keel;
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\sync.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         throwError = __modules__['keel\\helpers.js']()
@@ -366,24 +366,24 @@ var __modules__ = {};
     }
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\helpers.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js']();
 
     var helpers = module.exports = Keel.hepers = {};
@@ -451,24 +451,24 @@ var __modules__ = {};
     };
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\template.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         setKey = __modules__['keel\\helpers.js']().setObject;
@@ -640,24 +640,24 @@ var __modules__ = {};
     });
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\events.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._;
 
@@ -927,24 +927,24 @@ var __modules__ = {};
     module.exports = Events;
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\model.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone,
@@ -1008,24 +1008,24 @@ var __modules__ = {};
 
     _.extend(Keel.Model.prototype, Events);
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\collection.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone,
@@ -1198,24 +1198,24 @@ var __modules__ = {};
 
     _.extend(Keel.Collection.prototype, Events);
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\view.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
         Keel = __modules__['keel\\core.js'](),
@@ -1341,24 +1341,24 @@ var __modules__ = {};
     _.extend(Keel.View.prototype, Events);
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\layout.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         View = __modules__['keel\\view.js']();
@@ -1450,24 +1450,24 @@ var __modules__ = {};
         }
     });
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\itemview.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         View = __modules__['keel\\view.js']();
@@ -1498,24 +1498,24 @@ var __modules__ = {};
 
     });
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\collectionview.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         ItemView = __modules__['keel\\itemview.js'](),
@@ -1712,24 +1712,24 @@ var __modules__ = {};
     });
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\compositeview.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         CollectionView = __modules__['keel\\collectionview.js'](),
         throwError = __modules__['keel\\helpers.js']()
@@ -1804,24 +1804,24 @@ var __modules__ = {};
 
     });
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\tree.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Model = __modules__['keel\\model.js']();
@@ -1922,24 +1922,24 @@ var __modules__ = {};
         }
     });
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\i18n.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._;
 
@@ -2037,24 +2037,24 @@ var __modules__ = {};
     };
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\validate.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._;
 
@@ -2097,24 +2097,24 @@ var __modules__ = {};
     };
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
   __modules__['keel\\application.js'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = function (require, exports, module) {
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = function (require, exports, module) {
     var Keel = __modules__['keel\\core.js'](),
         _ = Keel._,
         Backbone = Keel.Backbone,
@@ -2205,18 +2205,18 @@ var __modules__ = {};
     module.exports = Keel.Application = Application;
 
 };
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 
-return __modules__['keel.js']();
+  return __modules__['keel.js']();
 }(require));
 });

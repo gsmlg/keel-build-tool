@@ -1,25 +1,25 @@
-define(function(require, exports, module){
+define('{{pkgName}}', [{{makeList ignore}}], function(require, exports, module){
 module.exports = (function(require){
-var __modules__ = {};
+  var __modules__ = {};
 {{#each modules}}
   __modules__['{{makeName name}}'] = (function(){
   var module = function(){
-  var e = {};
-  var m = {};
-  m.exports = e;
-  var func = {{{transRequire moduleCode depsMap}}};
-  var out = func.call(null, require, e, m);
-  return out ? out : m.exports;
-  }
+    var e = {};
+    var m = {};
+    m.exports = e;
+    var func = {{{transRequire moduleCode depsMap}}};
+    var out = func.call(null, require, e, m);
+    return out ? out : m.exports;
+  };
   var module_obj = null;
   return function(){
-  if (module_obj===null) {
-  module_obj = module();
-  }
-  return module_obj;
-  }
-  }())
+    if (module_obj===null) {
+      module_obj = module();
+    }
+    return module_obj;
+  };
+  }());
 {{/each}}
-return __modules__['{{makeName name}}']();
+  return __modules__['{{makeName name}}']();
 }(require));
 });

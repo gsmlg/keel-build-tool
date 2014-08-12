@@ -23,6 +23,10 @@ handlebars.registerHelper 'transRequire', (code, map)->
       matched
   transed
 
+handlebars.registerHelper 'makeList', (arr)->
+  list = _.map arr, (item)-> return "'#{item}'"
+  new handlebars.SafeString(list.join ', ')
+
 class Package
   commentRegExp = /(\/\*([\s\S]*?)\*\/|([^:]|^)\/\/(.*)$)/mg
   cjsRequireRegExp = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g
@@ -31,6 +35,7 @@ class Package
     @_options = _.extend {}, options
     @basePath = @_options.base
     @ignore = options.ignore
+    @pkgname = options.name
     @files = []
 
   # main method
@@ -40,7 +45,12 @@ class Package
     tpl = fs.readFileSync join(__dirname, '..', 'template.hbs'), 'utf-8'
     template = handlebars.compile tpl
     # console.log _.last(@modules)
-    @output = template({modules: @modules, name: @modules[0].name})
+    @output = template({
+      modules: @modules,
+      name: @modules[0].name,
+      pkgName: @pkgname,
+      ignore: @ignore
+    })
 
   check_and_load: ->
     file = @_options.input

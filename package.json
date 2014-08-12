@@ -1,7 +1,7 @@
 {
   "name": "keel-build-tool",
-  "version": "0.1.2",
-  "description": "build for keel",
+  "version": "0.2.0",
+  "description": "build tool for keel",
   "main": "lib/index.js",
   "scripts": {
     "test": "cake test"
